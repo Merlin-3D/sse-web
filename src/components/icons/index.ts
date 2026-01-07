@@ -5,6 +5,7 @@ import FlagFrenchIcon from "./flag-french-icon";
 import InstagramIcon from "./instagram-icon";
 import LinkedinIcon from "./linkedin-icon";
 import MailIcon from "./mail-icon";
+import WhatsappIcon from "./whatsapp-icon";
 
 export {
   CallIcon,
@@ -14,4 +15,5 @@ export {
   MailIcon,
   FlagFrenchIcon,
   FlagEnglishIcon,
+  WhatsappIcon,
 };

@@ -9,9 +9,9 @@ export default function FlagFrenchIcon({ ...prosp }: SVGProps<SVGSVGElement>) {
       <path
         fill="none"
         stroke="#000"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M5 17h62v38H5z"
       />
     </svg>

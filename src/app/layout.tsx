@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { googleSans } from "@/utils/fonts";
+import { archivoSans, googleSans } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${googleSans.className}`}>{children}</body>
+      <body className={`${archivoSans.className}`}>{children}</body>
     </html>
   );
 }
