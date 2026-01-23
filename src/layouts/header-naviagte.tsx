@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/button";
 import LanguageSelect from "@/components/language-select";
 import classNames from "classnames";
 import Image from "next/image";

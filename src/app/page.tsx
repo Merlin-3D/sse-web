@@ -1,9 +1,107 @@
+"use client";
 import { Button } from "@/components/button";
 import { WhatsappIcon } from "@/components/icons";
 import ContactCard from "@/components/views/card-contact";
+import FaqSection from "@/components/views/faq-section";
 import FindCard from "@/components/views/find-card";
+import QuoteSection from "@/components/views/quote-section";
+import Sectors from "@/components/views/sectors";
+import Footer from "@/layouts/footer";
 import Header from "@/layouts/header";
 import Image from "next/image";
+
+const experts = [
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        commerciale <br /> (secteur construction)
+      </>
+    ),
+  },
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        institutionnel <br /> (secteur construction)
+      </>
+    ),
+  },
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        résidentiel <br />
+        (secteur construction)
+      </>
+    ),
+  },
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        génie civil <br />
+        (secteur construction)
+      </>
+    ),
+  },
+
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: <>Manufacturier</>,
+  },
+
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: <>secteur minier</>,
+  },
+
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: <>secteur forestier</>,
+  },
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: <>secteur pétrochimie</>,
+  },
+
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        signaleur routier <br />
+        (longue durée)
+      </>
+    ),
+  },
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        ménage de chantier <br />
+        (hors ccq)
+      </>
+    ),
+  },
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        coordonnateur <br />
+        environnement
+      </>
+    ),
+  },
+  {
+    img: "/images/comm-1024x683.jpg",
+    title: (
+      <>
+        audit <br />
+        (sst et environnement)
+      </>
+    ),
+  },
+];
 
 export default function Home() {
   return (
@@ -18,15 +116,18 @@ export default function Home() {
         </div>
         <div className="bg-primary pb-24">
           <div className="flex flex-col gap-8 items-center py-48">
-            <h1 className="text-7xl text-secondary font-bold">
-              APPRENDRE TRAVAILLER ÉVOLUER
-            </h1>
-            <h1 className="text-7xl font-extrabold text-white uppercase">
+            <div className="relative h-24 w-full text-center">
+              <h1 className="text-7xl text-secondary font-bold">
+                APPRENDRE TRAVAILLER ÉVOLUER
+              </h1>
+            </div>
+            <h1 className="text-7xl font-extrabold text-white uppercase animate-fade-in">
               Évoluons ensemble en SST
             </h1>
-            <p className="text-secondary text-3xl mx-auto max-w-5xl text-center">
-              La compagnie LEX0-1000 Inc. Dispose d’une expertise en santé et
-              sécurité dans l’industrie de la construction (certification
+
+            <p className="text-secondary text-3xl mx-auto max-w-5xl text-center animate-slide-up">
+              La compagnie LEX0-1000 Inc. Dispose dune expertise en santé et
+              sécurité dans l&apos;industrie de la construction (certification
               CNESST), le secteur industriel (raffinerie de pétrole), le secteur
               manufacturier (usine) au Québec et dans le secteur forestier et
               minier au Canada et aux USA (certification: NCSO et NHSA)
@@ -104,6 +205,72 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className="bg-primary pb-24">
+        <div className="mx-auto container">
+          <div className="flex items-center justify-between">
+            <h1 className="text-7xl text-secondary text-center font-bold">
+              NOTRE EXPERTISE
+            </h1>
+            <div>
+              <Button size="2xl">Contactez Nous</Button>
+            </div>
+          </div>
+          <div className="grid grid-cols-4 gap-x-8 gap-y-16 mt-10">
+            {experts.map((item, i) => {
+              return <Sectors key={i} urlImage={item.img} title={item.title} />;
+            })}
+          </div>
+        </div>
+      </section>
+      <section className="mx-auto container mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full">
+          <div className={"w-full"}>
+            <Image
+              src={"/images/comm-1024x683.jpg"}
+              alt=""
+              // layout="fill"
+              height={1000}
+              width={1000}
+              className="min-w-full min-h-80"
+            />
+          </div>
+          <div
+            className={
+              "bg-primary flex flex-col items-center justify-around px-4 md:px-0"
+            }
+          >
+            <h4 className="font-bold text-4xl text-center text-secondary">
+              NOS SERVICES
+            </h4>
+
+            <p className="font-light text-2xl px-4 text-secondary text-center">
+              Nous offrons des services de location de coordonnateur et/ou de
+              conseiller en santé et sécurité, avec ou sans la certification
+              CNESST, (parlant parfaitement l’anglais et le français), pour le
+              secteur de la construction au Québec et le Nunavut.
+            </p>
+            <p className="font-light text-2xl px-4 text-secondary text-center">
+              Nous offrons aussi des services de location de coordonnateur et/ou
+              de conseiller en santé et sécurité (parlant parfaitement anglais
+              et français), pour le secteur forestier et minier au Canada et aux
+              USA. Avec la certification: NCSO® (National Construction Safety
+              Officer) ou avec la certification: NHSA™ (National Health and
+              Safety Administrator)
+            </p>
+            <div>
+              <Button
+                size="xl"
+                className="uppercase rounded-full font-light text-sm"
+              >
+                découvrir nos services
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <FaqSection />
+      <QuoteSection />
+      <Footer />
     </>
   );
 }

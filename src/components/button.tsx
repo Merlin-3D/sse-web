@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-type ButtonSize = "sm" | "md" | "lg" | "xl";
+type ButtonSize = "sm" | "md" | "lg" | "xl" | "2xl";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
@@ -13,6 +13,7 @@ const sizeClasses: Record<ButtonSize, string> = {
   md: "px-4 py-2 text-sm",
   lg: "px-5 py-2 text-base",
   xl: "px-5 py-2 text-xl",
+  "2xl": "px-8 py-4 text-2xl",
 };
 
 export const Button: React.FC<ButtonProps> = ({
