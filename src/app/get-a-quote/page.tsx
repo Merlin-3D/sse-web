@@ -149,7 +149,7 @@ export default function GetAQuote() {
             />
 
             <div className="relative z-10 mt-auto">
-              <p className="text-sm/6 text-white mb-5 max-w-[400px]">
+              <p className="text-sm/6 text-white mb-5 max-w-100">
                 Stop spending hours recreating layouts - with{" "}
                 <strong>PrebuiltUI</strong> you can copy, customize and launch
                 stunning UIs in minutes.
