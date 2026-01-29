@@ -1,4 +1,5 @@
 "use client";
+import BackgroundSlider from "@/components/background-slider";
 import { Button } from "@/components/button";
 import { WhatsappIcon } from "@/components/icons";
 import ContactCard from "@/components/views/card-contact";
@@ -107,32 +108,45 @@ export default function Home() {
   return (
     <>
       <Header />
-      <section>
-        <div className="bg-secondary py-4 w-full">
-          <h1 className="uppercase text-4xl text-black text-center font-bold">
-            CONSULTANT EN SANTÉ ET SÉCURITÉ AU TRAVAIL, MULTI-SECTEUR AU QUÉBEC,
-            CANADA ET USA
-          </h1>
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <BackgroundSlider />
+          <div className="absolute inset-0 bg-black/60 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
         </div>
-        <div className="bg-primary pb-24">
-          <div className="flex flex-col gap-8 items-center py-48">
-            <div className="relative h-24 w-full text-center">
-              <h1 className="text-7xl text-secondary font-bold">
-                APPRENDRE TRAVAILLER ÉVOLUER
-              </h1>
-            </div>
-            <h1 className="text-7xl font-extrabold text-white uppercase animate-fade-in">
-              Évoluons ensemble en SST
+
+        <div className="container relative z-10 mx-auto px-6 md:px-12">
+          <div className="max-w-3xl text-white">
+            <span className="inline-block px-4 py-1 mb-6 text-sm font-semibold tracking-widest uppercase bg-secondary rounded-full">
+              Apprendre • Travailler • Évoluer
+            </span>
+
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 uppercase tracking-tighter">
+              Évoluons ensemble <br />
+              <span className="text-secondary not-italic">en SST</span>
             </h1>
 
-            <p className="text-secondary text-3xl mx-auto max-w-5xl text-center animate-slide-up">
-              La compagnie LEX0-1000 Inc. Dispose dune expertise en santé et
-              sécurité dans l&apos;industrie de la construction (certification
-              CNESST), le secteur industriel (raffinerie de pétrole), le secteur
-              manufacturier (usine) au Québec et dans le secteur forestier et
-              minier au Canada et aux USA (certification: NCSO et NHSA)
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 border-l-4 border-secondary pl-6 max-w-2xl">
+              La compagnie{" "}
+              <strong className="text-white">LEX0-1000 Inc.</strong> dispose
+              d&apos;une expertise en santé et sécurité dans l&apos;industrie de
+              la construction (certification CNESST), le secteur industriel,
+              manufacturier au Québec, ainsi que dans les secteurs forestier et
+              minier au Canada et aux USA (certifications NCSO et NHSA).
             </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Button className="px-8 py-4 bg-secondary hover:bg-opacity-90 text-black font-bold rounded-sm transition-all duration-300 shadow-xl uppercase text-sm tracking-wider">
+                Nos Services
+              </Button>
+              <button className="px-8 py-4 bg-transparent hover:bg-white hover:text-black text-white font-bold rounded-sm border-2 border-white transition-all duration-300 uppercase text-sm tracking-wider">
+                Contactez-nous
+              </button>
+            </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="bg-primary pb-24 pt-8">
           <h1 className="text-7xl text-secondary text-center font-bold">
             VOUS RECHERCHEZ ?
           </h1>

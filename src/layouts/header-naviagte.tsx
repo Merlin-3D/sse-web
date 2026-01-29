@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/button";
 import LanguageSelect from "@/components/language-select";
 import classNames from "classnames";
 import Image from "next/image";
@@ -35,7 +36,7 @@ export default function HeaderNavigate() {
 
   return (
     <header className="bg-white">
-      <div className="py-6 w-full container mx-auto max-w-7xl flex items-center justify-between">
+      <div className="py-6 w-full container mx-auto flex items-center justify-between">
         <Link href="/" className="z-10 relative">
           <Image
             src={"/logo/logo.png"}
@@ -66,7 +67,36 @@ export default function HeaderNavigate() {
             })}
           </ul>
         </div>
-        <LanguageSelect value={language} onChange={setLanguage} />
+        <div className="flex items-center">
+          <Button
+            size="lg"
+            className="
+              relative overflow-hidden
+              text-black
+              transition-colors duration-300
+              hover:text-white
+              group
+            "
+          >
+            <a href="/get-a-quote">
+              <span
+                className="
+                absolute inset-0
+                bg-black
+                scale-x-0
+                origin-right
+                transition-transform duration-300 ease-out
+                group-hover:scale-x-100
+                group-hover:origin-left
+              "
+              />
+
+              <span className="relative z-10">OBTENEZ UNE SOUMISSION</span>
+            </a>
+          </Button>
+
+          <LanguageSelect value={language} onChange={setLanguage} />
+        </div>
       </div>
     </header>
   );

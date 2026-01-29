@@ -21,10 +21,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-primary mb-2">
-              Heures d’ouverture :
-            </h4>
-            <p className="text-sm text-gray-700">Lundi – Vendredi 6am – 8pm</p>
+            <h4 className="font-semibold text-primary mb-2">Liens utiles :</h4>
+            <p className="text-sm text-gray-700 cursor-pointer">CNESST</p>
+            <p className="text-sm text-gray-700 cursor-pointer my-2">ASP CONSTRUCTION</p>
+            <p className="text-sm text-gray-700 cursor-pointer">CSA GROUP</p>
           </div>
 
           <div>
@@ -36,6 +36,11 @@ export default function Footer() {
               <li>info@lexo-1000.com</li>
               <li>bureau@lexo-1000.com</li>
             </ul>
+
+            <h4 className="font-semibold text-primary my-2">
+              Heures d’ouverture :
+            </h4>
+            <p className="text-sm text-gray-700">Lundi – Vendredi 6am – 8pm</p>
           </div>
 
           <div>
